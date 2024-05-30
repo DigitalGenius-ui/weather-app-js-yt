@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap icons  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+    <title>Weather APP</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- contents part  ------------------------------------------------------------------>
+      <div class="contents">
+        <div class="currentWeatherDegree">
+          <!-- search bar part  --------------------------------------------------------->
+          <div class="searchWeather">
+            <input type="text" class="search" placeholder="search" />
+            <span class="icon searchIcon"><i class="bi bi-search"></i></span>
+          </div>
+          <!-- degree part  ------------------------------------------------------------->
+          <div class="weatherDegree">
+            <div class="degree">
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weatherIcon" />
+              <h1>12 <span>°C</span></h1>
+            </div>
+          </div>
+          <!-- location part  ----------------------------->
+          <div class="location">
+            <span><i class="bi bi-geo"></i></span>
+            <p>Kabul/Afghanistan</p>
+          </div>
+          <!-- weather situation part  --------------------------------------------------->
+          <div class="weatherSituation">
+            <span><i class="bi bi-cloud"></i></span>
+            <p>Cloudy</p>
+          </div>
+        </div>
+        <div class="currentWeatherDetails">
+          <!-- degree change part  ----------------------------------------------------->
+          <div class="degreeChange">
+            <span class="cDegree active">°C</span>
+            <span class="fDegree">°F</span>
+          </div>
+          <!-- todays highlights  ----------------------------------->
+          <div class="today-highlight">
+            <h1 class="title">Today's Highlights</h1>
+            <!-- all todays weather info  ------------------>
+            <div class="highlights">
+              <!-- single todays weather info  ------------------------->
+              <!-- sunset  -->
+              <div class="single-items minmax">
+                <h1>Max/Min Temp</h1>
+                <div>
+                  <span class="icon"><i class="bi bi-thermometer-high"></i></span>
+                  <span>12°C</span>
+                </div>
+                <div>
+                  <span class="icon"><i class="bi bi-thermometer-low"></i></span>
+                  <span>12°C</span>
+                </div>
+              </div>
+              <!-- sunrise  -->
+              <div class="single-items sunTime">
+                <h1>Sunrise/Sunset</h1>
+                <div>
+                  <span class="icon"><i class="bi bi-sunrise-fill"></i></span>
+                  <span class="sunrise">12PM</span>
+                </div>
+                <div>
+                  <span class="icon"><i class="bi bi-sunset-fill"></i></span>
+                  <span class="sunrset">12PM</span>
+                </div>
+              </div>
+              <!-- feels like  -->
+              <div class="single-items">
+                <h1>Feels Like</h1>
+                <div class="feel-like">
+                  <span class="icon"><i class="bi bi-thermometer"></i></span>
+                  <span class="fleeDegree">12°</span>
+                </div>
+              </div>
+              <!-- humidity  -->
+              <div class="single-items">
+                <h1>Humidity</h1>
+                <div class="humidity">
+                  <span class="icon"><i class="bi bi-droplet-fill"></i></span>
+                  <span class="fleeDegree"
+                    >12<span style="font-size: 1.1rem">%</span></span
+                  >
+                </div>
+              </div>
+              <!-- Wind Speed  -->
+              <div class="single-items">
+                <h1>Wind Speed</h1>
+                <div class="wind">
+                  <span class="icon"><i class="bi bi-wind"></i></span>
+                  <span class="fleeDegree"
+                    >12<span style="font-size: 1.1rem">Km/h</span></span
+                  >
+                </div>
+              </div>
+              <!-- Visibility -->
+              <div class="single-items">
+                <h1>Pressure</h1>
+                <div class="pressure">
+                  <span class="icon"><i class="bi bi-cloud-haze2-fill"></i></span>
+                  <span class="fleeDegree"
+                    >12<span style="font-size: 1.1rem">Km</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading">Loading</div>
+
+    <!-- luxon time formater  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js"
+      integrity="sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --main: #191923;
+  --single-body: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+  --shadow: rgba(211, 211, 211, 0.217);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 70%;
+  overflow: hidden;
+  color: #fff;
+  margin: 5rem;
+}
+
+@media screen and (max-width: 1159px) {
+  .container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 854px) {
+  .container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 816px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+
+.contents {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 950px) {
+  .contents {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* left sid of the website  */
+.contents .currentWeatherDegree {
+  flex: 0.4;
+  padding: 1rem;
+  background: var(--single-body);
+  border-radius: 10px;
+  height: 100%;
+}
+
+.searchWeather {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0px 0px 0px 1px inset var(--shadow);
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+.search {
+  flex: 1;
+  padding: 0.2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.icon {
+  color: var(--sahdow);
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #fff;
+}
+
+.weatherDegree .degree {
+  position: relative;
+  border-bottom: 1px solid var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.degree img {
+  width: 5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+@media screen and(max-width:950px) {
+  .degree img {
+    left: 7rem;
+  }
+}
+
+.degree h1 {
+  font-size: 6rem;
+  font-weight: 200;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.degree h1 span {
+  font-size: 3rem;
+}
+
+.weatherSituation,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.location p {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background-color: skyblue;
+  color: black;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.location p span {
+  font-size: 1rem;
+}
+
+/* right weather details  */
+.contents .currentWeatherDetails {
+  flex: 1;
+  background: var(--single-body);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/*degree change  */
+.currentWeatherDetails .degreeChange {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.degreeChange span {
+  background-color: black;
+  padding: 0.3rem;
+  border-radius: 50px;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.degreeChange span.active {
+  background-color: skyblue;
+  color: black;
+}
+
+/* todays weather  */
+.today-highlight {
+  width: 100%;
+}
+
+.today-highlight .title {
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  font-weight: 400;
+}
+
+.today-highlight .highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+.highlights .single-items {
+  background-color: black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.single-items div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.single-items .icon {
+  background-color: skyblue;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: black;
+  border-radius: 50px;
+  font-size: 1.2rem;
+}
+
+.single-items span {
+  font-size: 0.8rem;
+}
+
+.single-items .fleeDegree {
+  font-size: 2.5rem;
+}
+
+.highlights h1 {
+  font-size: 0.7rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.bi {
+  pointer-events: none;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.loading.remove {
+  display: none;
+}
